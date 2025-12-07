@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Wehner Janka">
+    <meta name="description" content="A magyar lóversenyzés története, a galopp és ügető versenytípusok, valamint a Kincsem Park bemutatása. Jegyfoglalási lehetőség a versenyekre.">
+    <title>Kincsem Park</title>
+    <link rel="icon" type="image/png" href="./mellékletek/favicon03.png" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <a href="./main.html">Magyar <span>Lóverseny</span>
+            <img id="icon" src="./mellékletek/favicon04.png" alt="" aria-hidden="true" /></a>
+        </div>
+
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <ul class="nav-links" id="nav-links">
+            <li><a href="./main.html">Főoldal</a></li>
+            <li><a href="./versenyek.html">Versenytípusok</a></li>
+            <li><a href="./kincsem.html" class="active">Kincsem Park</a></li>
+            <li><a href="./jegyek.html">Jegyfoglalás</a></li>
+        </ul>
+    </nav>
+        
+    <main>
+        <h1 class="cim">Kincsem Park</h1>
+        <article class="szoveg">
+            <p>A Kincsem Park Magyarország legjelentősebb lóversenyközpontja, ahol galopp és ügetőversenyek egyaránt zajlanak. A létesítmény a hagyomány és a modern sportélmény találkozása: egy hely, ahol a lóversenyzés múltja, jelene és jövője egyszerre van jelen, és ahol minden versenynap új izgalmakat ígér.</p>
+            
+            <h2>Kincsem – a magyar lóversenyzés ikonja</h2>
+            <p>Kincsem 1874-ben született a kisbéri ménesben, gazdája pedig gróf Blaskovich Ernő volt, aki fiatal kora óta hitt rendkívüli képességeiben. Trénere, Hesp Róbert gondos felkészítése révén Kincsem a lóversenyzés történetének legpáratlanabb pályafutását érte el: 54 rajt, 54 győzelem, több országban és különböző pályákon.</p>
+            <p>Ő volt az a ló, aki nem ismert vereséget, aki saját személyiségével, különleges szokásaival és kedvenc macskájához fűződő kapcsolatával is lenyűgözte korának közönségét. Hírneve és győzelmei ma is élnek: a róla elnevezett versenynapok és a Park elkötelezett rajongói méltón őrzik emlékét.</p>
+            
+            <h3>Kincsem Családfa</h3>
+
+            <div class="horse" id="kincsem">
+                <h3>Kincsem</h3>
+                <button class="toggle-info" onclick="toggleInfo(this)">További infó ▼</button>
+                <div class="horse-info" style="display:none;">
+                    <img src="./mellékletek/kincsem.jpg" alt="Kincsem">
+                    <p>A legyőzhetetlen csodakanca:</p>
+                    <p>54 verseny, 54 győzelem – veretlen legenda</p>
+                    <p>Született: 1874</p>
+                </div>
+
+                <button class="toggle-parents" onclick="toggleParents(this)">Szülők megjelenítése</button>
+                <div class="parents-container" style="display:none;">
+
+                    <div class="horse">
+                        <h4>Cambuscan</h4>
+                        <button class="toggle-info" onclick="toggleInfo(this)">További infó ▼</button>
+                        <div class="horse-info" style="display:none;">
+                            <img src="./mellékletek/cambuscan.jpg" alt="Cambuscan">
+                            <p>Kincsem apja, angol telivér</p>
+                            <p>Született: 1861</p>
+                        </div>
+
+                        <button class="toggle-parents" onclick="toggleParents(this)">Szülők megjelenítése</button>
+                        <div class="parents-container" style="display:none;">
+
+                            <div class="horse">
+                                <h5>Newminster</h5>
+                                <button class="toggle-info" onclick="toggleInfo(this)">További infó ▼</button>
+                                <div class="horse-info">
+                                    <p>Cambuscan apja, angol telivér mén</p>
+                                    <p>Született: 1848</p>
+                                </div>
+                            </div>
+
+                            <div class="horse">
+                                <h5>The Arrow</h5>
+                                <button class="toggle-info" onclick="toggleInfo(this)">További infó ▼</button>
+                                <div class="horse-info">
+                                    <p>Cambuscan anyja, angol telivér kanca</p>
+                                    <p>Született: 1850</p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="horse">
+                        <h4>Water Nymph</h4>
+                        <button class="toggle-info" onclick="toggleInfo(this)">További infó ▼</button>
+                        <div class="horse-info" style="display:none;">
+                            <img src="./mellékletek/waternymph.jpg" alt="Waternymph">
+                            <p>Kincsem anyja, angol telivér kanca</p>
+                            <p>Született: 1860</p>
+                        </div>
+
+                        <button class="toggle-parents" onclick="toggleParents(this)">Szülők megjelenítése</button>
+                        <div class="parents-container" style="display:none;">
+
+                            <div class="horse">
+                                <h5>Cotswold</h5>
+                                <button class="toggle-info" onclick="toggleInfo(this)">További infó ▼</button>
+                                <div class="horse-info">
+                                    <p>Water Nymph apja, angol telivér mén</p>
+                                    <p>Született: 1853</p>
+                                </div>
+                            </div>
+
+                            <div class="horse">
+                                <h5>The Mermaid</h5>
+                                <button class="toggle-info" onclick="toggleInfo(this)">További infó ▼</button>
+                                <div class="horse-info">
+                                    <p>Water Nymph anyja, angol telivér kanca</p>
+                                    <p>Született: 1853</p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <h2>A Kincsem Park felépítése és sajátosságai</h2>
+            <p>A Kincsem Park letisztult, tágas és sportorientált kialakítása kifejezetten a versenyzés dinamikáját szolgálja.</p>
+            <p>Több pályarendszer működik benne, amelyek különböző versenytípusoknak adnak otthont:</p>
+            <ul>
+                <li>A gyepes galopp-pálya a vágtázó telivérek számára biztosít optimális, rugalmas felületet, amely a nagy távú és klasszikus versenyek otthona.</li>
+                <li>Az ügetőpálya speciális, gyors burkolattal rendelkezik, hogy biztonságos legyen a sulkyval közlekedő hajtók és lovaik számára.</li>
+            </ul>
+            <p>A lelátók úgy vannak elhelyezve, hogy a nézők közelről figyelhessék a rajtot, a kanyarokat és a befutót is — ennek köszönhetően a versenyek minden mozzanata közvetlen élményt nyújt. A vendéglátó- és közösségi terek a modern rendezvényhelyszínek kényelmét hozzák el a lóverseny világába: éttermek, fogadóirodák, családi programok és kulturális események várják a látogatókat.</p>
+            <p>Az épületek és kiszolgáló létesítmények célja, hogy minden szereplő — ló, lovas/hajtó és közönség — a legjobb körülmények között lehessen jelen a sportban. A Park infrastruktúrája egyaránt szolgálja a magas szintű versenyrendezést és a látogatók kényelmét.</p>
+            <img class="kincsem_terkep" src="./mellékletek/kincsemp_terkep.jpg" alt="Kincsem Park térképe">
+            
+            <h2>Sport és közösségi élmény találkozása</h2>
+            <p>A Kincsem Park nem csupán versenypálya, hanem pezsgő találkozóhely is: a lóversenyek mellett fesztiválok, tematikus hétvégék, esti programok és családi események színesítik a naptárt. Ez az a hely, ahol a hagyományok nemcsak megmaradnak, hanem új életre kelnek — új rajongókkal és modern élményekkel gazdagodva.</p>
+        </article>
+    </main>
+
+    <footer id="lablec">
+        <p>© 2025 Magyar Lóverseny - készítette: Wehner Janka</p>
+    </footer>
+
+    <script src="script01.js"></script>
+    <script src="csaladfa.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,787 @@
+/* --- google fontok --- */
+@import url('https://fonts.googleapis.com/css2?family=Alan+Sans:wght@300..900&family=Bitcount+Prop+Single+Ink:wght@100..900&family=Bree+Serif&family=Instrument+Serif:ital@0;1&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Young+Serif&display=swap');
+
+
+/* --- általános --- */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Young Serif", serif;
+    line-height: 1.2;
+    background-color: #f7f3ec;
+    color: #2b1d0e;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.2rem;
+    background: rgba(0, 0, 0, 0.65);
+    color: white;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.4rem;
+    font-weight: 700;
+    font-family: Instrument Serif;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.logo a{
+    text-decoration: none;
+    color: white;
+}
+
+.logo span{
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: #f8b928;
+}
+
+#icon{
+    width: 3.2rem; 
+    margin-left: 0.6rem;
+    vertical-align: middle;
+    display: inline-block;
+}
+
+/* Hamburger menü */
+.hamburger {
+    width: 30px;
+    height: 22px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.hamburger span {
+    display: block;
+    height: 4px;
+    background: white;
+    border-radius: 3px;
+    transition: 0.3s;
+}
+
+
+/* Hamburger animációja */
+.hamburger.open span:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+}
+
+.hamburger.open span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.open span:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+}
+
+
+/* navigáció - telefonon elrejtve */
+.nav-links {
+    font-family: Instrument Serif;
+    list-style: none;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 60%;
+    background: rgba(0, 0, 0, 0.9);
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1.5rem;
+    display: none;
+}
+
+.nav-links.show {
+    display: flex;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.3rem;
+    font-weight: bold;
+    letter-spacing: 1.2px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links .active {
+    color: #f8b928;
+}
+
+
+
+/* --- LÁBLÉC --- */
+#lablec {
+    font-size: 0.7rem;
+    background-color: #2b1d0e;
+    color: #fff;
+    text-align: center;
+    padding: 1.2rem;
+    margin-top: 2rem;
+}
+
+
+/* --- MAIN ------------------------------------------------------- */
+
+.hero {
+    height: 100vh;
+    background: url("./mellékletek/hatter01.jpg") center/cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 1rem;
+    color: white;
+}
+
+.hero-text h1 {
+    /* Mobile-first: smaller heading on phones and moved upwards */
+    font-size: 1.8rem;
+    margin-top: -13.5rem; /* moved up more */
+    text-shadow: 0 0 10px #000;
+}
+
+.hero-text p {
+    /* Mobile-first: smaller paragraph on phones */
+    font-size: 0.95rem;
+    margin: 1rem 0;
+    text-shadow: 0 0 8px #000;
+}
+
+
+/* --- history a lóversenyzésről --- */
+.hist {
+    padding: 3rem 1.2rem;
+    max-width: 900px;
+    margin: auto;
+    text-align: center;
+}
+
+.hist h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.hist p {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    line-height: 1.4;
+}
+
+.hist img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+    margin: 1rem auto;
+}
+
+
+/* highlights - kiemetl információk */
+.highlights {
+    background-color: #fff;
+    padding: 3rem 1.2rem;
+}
+
+.highlights h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 1.9rem;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.cards a {
+    text-decoration: none;
+    color: #2b1d0e;
+}
+
+.cards a:hover .card {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    transform: translateY(-4px);
+    transition: all 0.3s ease;
+}
+
+.card {
+    background-color: #f7f3ec;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    text-align: center;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.card h3 {
+    margin-top: 0.8rem;
+    font-size: 1.3rem;
+}
+
+
+
+
+/* --- VERSENYEK ------------------------------------------------------ */
+
+.cim {
+    color: white;
+    font-size: 2rem;
+    text-align: center;
+    text-shadow: 0 0 10px #000;
+    padding-top: 3rem;
+    padding-bottom: 2rem;
+}
+
+.galug {
+    padding: 2.5rem 1.2rem;
+    max-width: 900px;
+    margin: auto;
+}
+
+.card2 {
+    background-color:#f9d78af4;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    margin-bottom: 2rem;
+}
+
+.card2 h2 {
+    margin-bottom: 0.8rem;
+    font-size: 1.5rem;
+}
+
+.card2 p {
+    font-size: 1rem;
+    line-height: 1.4;
+    margin: 0 0.8rem 0.1rem 0.1rem;
+    text-align: justify;
+}
+
+.card2 ul {
+    list-style-type: disc;
+    padding-left: 1.2rem;
+    margin: 0.6rem;
+}
+
+.card2 li {
+    margin-bottom: 0.4rem;
+    font-size: 1rem;
+}
+
+.card2 h3 {
+    margin: 0.6rem 0;
+    font-size: 1.2rem;
+}
+
+.card2 img {
+    width: 100%;
+    border-radius: 8px;
+    margin: 1rem 0 0;
+}
+
+
+
+
+
+
+
+/* --- KINCSEM -------------------------------------------------------------- */
+main {
+    padding-top: 5rem;
+    padding-bottom: 2rem;
+    background-color: #f7f3ec;
+}
+
+.szoveg {
+    padding: 0 1.2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+    color: #2b1d0e;
+}
+
+.szoveg p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    text-align: justify;
+    color: #2b1d0e;
+}
+
+.szoveg h2 {
+    font-size: 1.4rem;
+    margin-top: 1.4rem;
+    margin-bottom: 0.8rem;
+    color: #2b1d0e;
+}
+
+.szoveg ul {
+    list-style-type: disc;
+    padding-left: 1.4rem;
+    margin-bottom: 1rem;
+}
+
+.szoveg li {
+    font-size: 1rem;
+    margin-bottom: 0.6rem;
+    text-align: justify;
+}
+
+.kincsem_terkep {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    margin: 1.4rem 0;
+    display: block;
+}
+
+
+/* -- családfa -- */
+
+.horse {
+    background-color: #fff8ee;
+    border: 2px solid #d2b48c;
+    border-radius: 8px;
+    padding: 12px;
+    margin: 10px 0;
+    position: relative;
+}
+
+/* hierarchia */
+.parents-container .horse {
+    margin-left: 18px;
+    border-color: #e0caa0;
+}
+
+/* címek */
+h3, h4, h5 {
+    margin: 0 0 8px;
+    font-size: 1rem;
+}
+
+/* képek */
+.horse-info img {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+    margin-top: 10px;
+}
+
+/* gombok */
+button {
+    background-color: #c08a4a;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 8px 10px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 6px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #a06f32;
+}
+
+/*informaciok */
+.horse-info {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #fff2dc;
+    border-radius: 6px;
+}
+
+.horse-info p {
+    margin: 6px 0;
+    font-size: 0.6rem;
+}
+
+
+
+
+/* --- JEGYEK ----------------------------------------------------------------- */
+
+.form-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 1.2rem;
+    align-items: center;
+}
+
+.form-container p {
+    color: #2b1d0e;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.jegy_tel {
+    display: block;
+    font-size: 0.9rem;
+    color:darkgray;
+    text-decoration: none;
+}
+
+/* -- intro -- */
+.intro-box {
+    max-width: 700px;
+    padding: 2rem 1rem;
+}
+
+.intro-box h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    margin-top: 1.5rem;
+}
+
+.intro-box p {
+    font-size: 1rem;
+    line-height: 1.4;
+    text-align: justify;
+}
+
+.intro-box ul {
+    list-style-type: disc;
+    padding-left: 1.4rem;
+    margin-bottom: 1rem;
+    line-height: 1.4;
+}
+
+
+/* -- űrlap -- */
+#urlap {
+    background: #f9d78af4;
+    padding: 1.4rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(43,29,14,0.12);
+    border: 1px solid rgba(0,0,0,0.04);
+    max-width: 500px;
+    width: 100%;
+    margin: auto;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-weight: 600;
+    margin-bottom: 0.6rem;
+    color: #2b1d0e;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="date"],
+select,
+textarea {
+    padding: 0.6rem 0.9rem;
+    border: 1px solid #e2d6b8;
+    border-radius: 8px;
+    background: #fff;
+    font-size: 1rem;
+    color: #2b1d0e;
+    transition: box-shadow 0.15s ease, border-color 0.15s ease;
+}
+
+/* ha belekattint*/
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="date"]:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(248,185,40,0.10);
+    border-color: #f8b928;
+}
+
+.radio-group input[type="radio"], 
+.radio-group label {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.radio-group input[type="radio"] {
+    transform: scale(1.25);
+    margin-right: 0.45rem;
+    accent-color: #2b1d0e;
+}
+
+#radio_cim {
+    font-weight: 600;
+}
+
+.radio-group {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.radio-item{
+    display: flex;
+    gap: 8px;
+}
+
+.radio-item label {
+    font-weight: 400;
+    color: #4a3319;
+    cursor: pointer;
+}
+
+.naptar {
+    margin-top: 3rem;
+    text-align: center;
+    padding: 1.4rem;
+}
+
+#naptar_kep {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 10px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+    margin-top: 1rem;
+}
+
+button[type="submit"] {
+    background: #2b1d0e;
+    color: #fff;
+    border: none;
+    padding: 0.8rem 1.1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 1rem;
+    transition: transform 0.12s ease, box-shadow 0.12s ease;
+}
+
+button[type="submit"]:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(43,29,14,0.18);
+}
+
+/* validáláshoz */
+.error-msg {
+    color: #a20000;
+    font-size: 0.85rem;
+    min-height: 1em;
+    margin-top: 5px;
+}
+
+.input-error { 
+            border-color: #dc3545 !important; 
+            background-color: #fff8f8; 
+        }
+
+.success-msg {
+    color: #075c07;
+    font-size: 0.95rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* --- Media Query ------------------------------------------------ */
+
+/* Kincsemnél külön media query (kicsit tágabb dobozok) */
+@media (min-width: 600px) {
+    .horse {
+        max-width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/* --- Tabletek --- */
+
+@media (min-width: 600px) and (max-width: 1023px) {
+    
+    .logo, .logo span {
+        font-size: 1.8rem;
+        gap: 0.5rem;
+    }
+
+    #icon, .logo img{
+        width: 3.8rem;
+    }
+
+    /* MAIN */
+    .hero-text h1 {
+        font-size: 2.4rem;
+        margin-top: -10rem;
+    }
+
+    .hero-text p {
+        font-size: 1.05rem;
+    }
+
+
+    /* VERSENYEK */
+    .card2 {
+        padding: 1.6rem;
+    }
+
+    /* KINCSEM */
+    .cim {
+        font-size: 2.2rem;
+        padding: 2rem 1.6rem 1.2rem;
+    }
+
+    .szoveg {
+        padding: 0 1.6rem;
+    }
+
+    .szoveg h2 {
+        font-size: 1.6rem;
+    }
+
+}
+
+
+/* --- Kisebb Laptopok --- */
+
+@media (min-width: 768px) {
+    .hamburger {
+        display: none;
+    }
+
+    .nav-links {
+        position: static;
+        display: flex !important;
+        flex-direction: row;
+        background: transparent;
+        width: auto;
+        padding: 0;
+    }
+
+    .nav-links a {
+        font-size: 1.2rem;
+    }
+
+    .logo, .logo span {
+        font-size: 2rem;
+        gap: 0.6rem;
+    }
+
+    #icon, .logo img {
+        width: 4.0rem;
+    }
+
+    /* MAIN */
+    .hero-text h1 {
+        font-size: 3rem;
+        margin-top: -13.5rem;
+    }
+
+    .hero-text p {
+        font-size: 1.3rem;
+    }
+
+    .cards {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    
+
+    /*VERSENYEK*/
+    .card2 {
+        padding: 2rem;
+    }
+
+
+    /* KINCSEM */
+    .cim {
+        font-size: 2.6rem;
+        padding: 2.4rem 2rem 1.4rem;
+    }
+
+    .szoveg {
+        padding: 0 2rem;
+        max-width: 900px;
+    }
+
+    .szoveg p {
+        font-size: 1.05rem;
+    }
+
+    .szoveg h2 {
+        font-size: 1.8rem;
+        margin-top: 1.6rem;
+        margin-bottom: 1rem;
+    }
+
+    .szoveg li {
+        font-size: 1.05rem;
+    }
+
+    .kincsem_kep {
+        margin: 1.8rem 0;
+        border-radius: 10px;
+    }
+
+
+}
+
+
+
+
+/* --- Nagyobb képernyők --- */
+
+@media (min-width: 1200px) {
+
+
+    /*jegyek -- 2 blokk egymás mellé */
+    #form_equal {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 5rem;
+    }
+
+    .jegy_tel {
+        display: none;
+    }
+
+    .naptar h2 {
+        color: white;
+        text-shadow: 0 0 10px #000;
+        padding-top: 8rem;
+        padding-bottom: 2rem;
+    }
+}
