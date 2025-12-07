@@ -4,7 +4,7 @@ A webfejlesztés tárgy beadandója
 A készítő neve: Wehner Janka Júlia, VSAZH6
 		Budapesti Corvinus Egyetem
 
-A működő weboldal URL címe: 
+A működő weboldal URL címe: https://wjanekj.github.io/webfejlesztes/
 
 Leírás: 
 	A weboldal témája a magyar lóversenyzés. A weboldal betekintést nyújt a lóversenyzés két féle típusába (galopp és ügető); az egyedüli magyar lóversenypályára, a Kincsem Parkra; valamint jegyfogalásra is lehetőségük van a weboldalra látogatóknak.
